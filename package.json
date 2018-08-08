@@ -4,6 +4,7 @@
   "description": "create an app to consume rust-generated wasm packages",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
     "start": "webpack-dev-server"
   },
   "repository": {
@@ -22,7 +23,7 @@
     "url": "https://github.com/rustwasm/create-wasm-app/issues"
   },
   "homepage": "https://github.com/rustwasm/create-wasm-app#readme",
-  "dependencies": {
+  "devDependencies": {
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
