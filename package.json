@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "create an app to consume rust-generated wasm packages",
   "main": "index.js",
+  "bin": {
+    "create-wasm-app": ".bin/create-wasm-app.js"
+  },
   "scripts": {
     "start": "webpack-dev-server"
   },
