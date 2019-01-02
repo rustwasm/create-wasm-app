@@ -16,7 +16,7 @@ const clone = spawn("git", ["clone", "https://github.com/rustwasm/create-wasm-ap
 
 clone.on("close", code => {
   if (code !== 0) {
-    console.error("cloning the template failed!")
+    console.error("Please provide the desired project name, eg.: `npm init wasm-app <my-awesome-project>`")
     process.exit(code);
   } else {
     console.log("🦀 Rust + 🕸 Wasm = ❤");
