@@ -22,7 +22,7 @@ clone.stderr.on('data', data => {
 clone.on("close", code => {
   if (code !== 0) {
     console.error("cloning the template failed!");
-    errorMessage = errorMessage.replace('\n','\n    ');
+    errorMessage = errorMessage.replace('\n', '\n    ');
     console.log(`git output:\n    ${errorMessage}`)
     process.exit(code);
   } else {
