@@ -16,7 +16,7 @@ const clone = spawn("git", ["clone", "https://github.com/rustwasm/create-wasm-ap
 
 let errorMessage = '';
 clone.stderr.on('data', data => {
-    errorMessage+=data;
+    errorMessage += data;
 });
 
 clone.on("close", code => {
