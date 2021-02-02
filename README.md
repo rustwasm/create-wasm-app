@@ -2,7 +2,7 @@
 
   <h1><code>create-wasm-app</code></h1>
 
-  <strong>An <code>npm init</code> template for kick starting a project that uses NPM packages containing Rust-generated WebAssembly and bundles them with Webpack.</strong>
+  <strong>A template for kick starting a project that uses NPM packages containing Rust-generated WebAssembly and bundles them with Webpack.</strong>
 
   <p>
     <a href="https://travis-ci.org/rustwasm/create-wasm-app"><img src="https://img.shields.io/travis/rustwasm/create-wasm-app.svg?style=flat-square" alt="Build Status" /></a>
@@ -33,6 +33,12 @@ Rust-generated WebAssembly and using them to create a Website.
 
 ```
 npm init wasm-app
+```
+
+Or
+
+```
+yarn create wasm-app
 ```
 
 ## 🔋 Batteries Included
