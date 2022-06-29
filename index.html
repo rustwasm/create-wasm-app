@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello wasm-pack!</title>
-  </head>
-  <body>
-    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+            <div class='inner-box'></div>
+            <div class='fps-container'>
+                <div class='fps-counter' id="fps-counter"></div>
+            </div>
+        <canvas id='videoElement' class="output_canvas" width="1280px" height="720px"></canvas>
+        <video class="input_video"></video>
+    </div>
+    <pre id="hands"></pre>
     <script src="./bootstrap.js"></script>
-  </body>
+
+</body>
+
+<style>
+    .inner-box {
+    z-index: 10;
+    width: 400px;
+    height: 640px;
+    top: 60px;
+    left: 800px;
+    border: 1px dashed red;
+    text-align: center;
+    position: absolute;
+    transition: all ease-in-out .5s;
+    border-radius: 10px;
+}
+
+.inner-box:hover {
+    background-color: rgba(234, 0, 255, 0.253);
+    transition: all ease-in-out .5s;
+    width: 200px;
+    height: 240px;
+}
+
+.color {
+    background-color: rgba(234, 0, 255, 0.253);
+    transition: all ease-in-out .5s;
+    width: 200px;
+    height: 440px;
+    top: 65px;
+    left: 805px;
+}
+
+.input_video {
+    display: none;
+}
+
+#videoElement {
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); 
+    -moz-transform:rotateY(180deg);
+} 
+.fps-container {
+    width: 200px;
+    height: 20px;
+    z-index: 15;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 890px;
+    text-align: center;
+}
+
+.fps-counter {
+    font-size: 30px;
+    color: red;
+}
+  </style>
+
 </html>
