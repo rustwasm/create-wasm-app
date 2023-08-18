@@ -35,6 +35,28 @@ Rust-generated WebAssembly and using them to create a Website.
 npm init wasm-app
 ```
 
+**Note**
+You may face error like below:
+```shell
+(node:257464) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ℹ ｢wds｣: Project is running at http://localhost:8080/
+ℹ ｢wds｣: webpack output is served from /
+node:internal/crypto/hash:69
+  this[kHandle] = new _Hash(algorithm, xofLen);
+  ...
+```
+That error because of `devDependencies` versions conflicted with you Node version.
+
+You can simply update `devDependencies` versions by below commands:
+```shell
+npm i -g npm-check-updates
+ncu -u
+npm install
+```
+Reference: https://stackoverflow.com/a/16074029/8093348 
+
+
 ## 🔋 Batteries Included
 
 - `.gitignore`: ignores `node_modules`
